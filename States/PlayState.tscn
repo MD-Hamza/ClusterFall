@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvo0c47cohnn7"]
+
+[ext_resource type="PackedScene" uid="uid://8shf67jy5ojq" path="res://Player/player.tscn" id="1_0guaw"]
+[ext_resource type="PackedScene" uid="uid://17imusrmkw36" path="res://Tiles/Tiles.tscn" id="2_84226"]
+
+[node name="PlayState" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("1_0guaw")]
+
+[node name="Tile" parent="." instance=ExtResource("2_84226")]
+position = Vector2(60, 18)
+
+[node name="Tile2" parent="." instance=ExtResource("2_84226")]
+position = Vector2(61, 144)
+
+[node name="Tile3" parent="." instance=ExtResource("2_84226")]
+position = Vector2(59, 268)
