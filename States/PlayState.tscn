@@ -5,8 +5,6 @@
 
 [node name="PlayState" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_0guaw")]
-
 [node name="Tile" parent="." instance=ExtResource("2_84226")]
 position = Vector2(60, 18)
 
@@ -15,3 +13,5 @@ position = Vector2(61, 144)
 
 [node name="Tile3" parent="." instance=ExtResource("2_84226")]
 position = Vector2(59, 268)
+
+[node name="Player" parent="." instance=ExtResource("1_0guaw")]
