@@ -6,21 +6,30 @@ extends Node2D
 var projectile_scene: PackedScene = preload("res://Projectile/projectile.tscn")
 var projectiles: Array = []
 var final_pos: Vector2 = Vector2(500, 300)
+var prevPlayerPosition: Vector2
+
 
 func _process(delta):
+	var player = get_tree().get_nodes_in_group("Player")[0]
+	if (!projectiles.is_empty()):
+		for p in projectiles:
+			var playerdelta = player.position - prevPlayerPosition;
+			p.position += playerdelta;
+		
 	if Input.is_action_just_pressed("shoot"):
-		var player = get_tree().get_nodes_in_group("Player")[0]
 		spawn_projectiles(player.position);
 	
 	if Input.is_action_just_released("shoot"):
+		final_pos = player.position + Vector2(250, 0);
 		for p in projectiles:
 			if p and p.is_inside_tree():
 				var tween := create_tween()
 				tween.tween_property(p, "position", final_pos, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 
 		projectiles.clear()
-		
-func spawn_projectiles(point: Vector2):
+	prevPlayerPosition = player.position;
+	
+func spawn_projectiles(player: Vector2):
 	var num_projectiles = 5
 	var middle_index = num_projectiles / 2
 
@@ -30,14 +39,12 @@ func spawn_projectiles(point: Vector2):
 		projectiles.append(projectile);
 		
 		# Start all projectiles at the middle projectile position
-		var start_pos = point
+		var start_pos = player
 		projectile.position = start_pos
 
 		# Target vertical offset relative to middle projectile
 		var y_offset = (i - middle_index) * spacing
-		var target_pos = point + Vector2(150, y_offset)
-		if (i == middle_index):
-			final_pos = target_pos + Vector2(150, 0);
+		var target_pos = Vector2(150, y_offset) + player;
 		
 		# Tween to the target position
 		var tween := create_tween()
