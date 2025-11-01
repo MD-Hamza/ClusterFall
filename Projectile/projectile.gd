@@ -10,6 +10,8 @@ var timer = 0;
 var shot_time = 0.4;
 
 var player;
+signal destroyed(position: Vector2)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	current = State.EXPAND;
@@ -36,4 +38,5 @@ func _process(delta):
 	elif (current == State.WAITING):
 		position = end_pos + player.position;
 	else:
+		destroyed.emit(position);
 		queue_free()

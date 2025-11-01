@@ -12,6 +12,7 @@ var targets: Array = []
 var shooting = false
 var timer = 0;
 
+signal destroyed(position: Vector2)
 
 func _process(delta):	
 	projectiles = projectiles.filter(func(x): return x != null)
@@ -22,7 +23,13 @@ func _process(delta):
 	if Input.is_action_just_released("shoot"):
 		for p in projectiles:
 			p.converge(Vector2(250, 0))
-	
+			
+		if (projectiles):
+			projectiles[0].destroyed.connect(_on_destroy)
+
+func _on_destroy(position: Vector2):
+	destroyed.emit(position);
+
 func spawn_projectiles():
 	var num_projectiles = 5
 	var middle_index = num_projectiles / 2
