@@ -3,6 +3,8 @@ extends CharacterBody2D
 @export var speed = 500
 @export var half_height_offset = 16
 
+signal teleport
+
 func _physics_process(delta):
 	var input_vector = Vector2.ZERO
 	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
@@ -37,3 +39,7 @@ func check_tiles_below():
 	for hit in result:
 		if hit.collider.has_method("on_player_stand"):
 			hit.collider.on_player_stand()
+
+
+func _on_teleport(_position):
+	position = _position

@@ -12,6 +12,7 @@ var targets: Array = []
 var shooting = false
 var timer = 0;
 
+
 func _process(delta):	
 	projectiles = projectiles.filter(func(x): return x != null)
 		

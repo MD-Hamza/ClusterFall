@@ -16,3 +16,5 @@ texture = ExtResource("2_bf25y")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 37)
 shape = SubResource("RectangleShape2D_p3axq")
+
+[connection signal="teleport" from="." to="." method="_on_teleport"]
