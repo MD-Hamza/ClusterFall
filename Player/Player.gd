@@ -37,3 +37,4 @@ func check_tiles_below():
 	for hit in result:
 		if hit.collider.has_method("on_player_stand"):
 			hit.collider.on_player_stand()
+

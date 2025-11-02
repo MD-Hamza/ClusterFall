@@ -12,16 +12,25 @@ var targets: Array = []
 var shooting = false
 var timer = 0;
 
+signal destroyed(position: Vector2)
+
 func _process(delta):	
 	projectiles = projectiles.filter(func(x): return x != null)
 		
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_just_pressed("shoot") or Input.is_action_just_pressed("teleportShot"):
 		spawn_projectiles();
 	
-	if Input.is_action_just_released("shoot"):
+	if Input.is_action_just_released("shoot") or Input.is_action_just_released("teleportShot"):
 		for p in projectiles:
 			p.converge(Vector2(250, 0))
 	
+	if Input.is_action_just_released("teleportShot"):
+		if (projectiles):
+			projectiles[0].destroyed.connect(_on_destroy)
+
+func _on_destroy(position: Vector2):
+	destroyed.emit(position);
+
 func spawn_projectiles():
 	var num_projectiles = 5
 	var middle_index = num_projectiles / 2
