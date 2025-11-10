@@ -18,3 +18,5 @@ texture = SubResource("PlaceholderTexture2D_v2kmh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(23.5, 22.5)
 shape = SubResource("RectangleShape2D_gvr5s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
