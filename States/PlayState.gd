@@ -5,8 +5,12 @@ extends Node2D
 func _ready():
 	$Spawner.destroyed.connect(_teleport_player);
 
+	
 func _teleport_player(position: Vector2):
 	$Player.position = position
+
+func game_over():
+	$Player.position = Vector2.ZERO
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

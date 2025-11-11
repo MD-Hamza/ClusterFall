@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cjfsblirbdfbi"]
+
+[ext_resource type="Script" path="res://Obstacle/Obstacle.gd" id="1_sb5qo"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_v2kmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gvr5s"]
+size = Vector2(39, 33)
+
+[node name="Obstacle" type="Area2D"]
+script = ExtResource("1_sb5qo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22, 22)
+scale = Vector2(43.75, 41.75)
+texture = SubResource("PlaceholderTexture2D_v2kmh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(23.5, 22.5)
+shape = SubResource("RectangleShape2D_gvr5s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
