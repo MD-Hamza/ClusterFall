@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c6jtttscukpql" path="res://Projectile/ProjectileSpawner.tscn" id="3_6tjg1"]
 [ext_resource type="PackedScene" uid="uid://cjfsblirbdfbi" path="res://Obstacle/Obstacle.tscn" id="5_yvm6h"]
 
-[node name="PlayState" type="Node2D"]
+[node name="PlayState" type="Node2D" groups=["playstate"]]
 script = ExtResource("1_0swo3")
 
 [node name="Tile" parent="." instance=ExtResource("2_84226")]
@@ -24,5 +24,7 @@ position = Vector2(59, 268)
 
 [node name="Spawner" parent="." instance=ExtResource("3_6tjg1")]
 
-[node name="Obstacle" parent="." instance=ExtResource("5_yvm6h")]
+[node name="Obstacles" type="Node2D" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource("5_yvm6h")]
 position = Vector2(592, 180)
