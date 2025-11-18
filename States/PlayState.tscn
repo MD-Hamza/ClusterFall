@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvo0c47cohnn7"]
+[gd_scene load_steps=7 format=3 uid="uid://cvo0c47cohnn7"]
 
 [ext_resource type="PackedScene" uid="uid://8shf67jy5ojq" path="res://Player/player.tscn" id="1_0guaw"]
 [ext_resource type="Script" path="res://States/PlayState.gd" id="1_0swo3"]
 [ext_resource type="PackedScene" uid="uid://17imusrmkw36" path="res://Tiles/Tiles.tscn" id="2_84226"]
 [ext_resource type="PackedScene" uid="uid://c6jtttscukpql" path="res://Projectile/ProjectileSpawner.tscn" id="3_6tjg1"]
 [ext_resource type="PackedScene" uid="uid://cjfsblirbdfbi" path="res://Obstacle/Obstacle.tscn" id="5_yvm6h"]
+[ext_resource type="PackedScene" uid="uid://c22hirvyt17kr" path="res://Obstacle/walls.tscn" id="6_iws00"]
 
 [node name="PlayState" type="Node2D" groups=["playstate"]]
 script = ExtResource("1_0swo3")
@@ -18,13 +19,22 @@ position = Vector2(61, 144)
 [node name="Tile3" parent="." instance=ExtResource("2_84226")]
 position = Vector2(59, 268)
 
-[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_0guaw")]
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-
 [node name="Spawner" parent="." instance=ExtResource("3_6tjg1")]
 
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Obstacle" parent="Obstacles" instance=ExtResource("5_yvm6h")]
 position = Vector2(592, 180)
+
+[node name="Walls" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(700, 72)
+
+[node name="Walls2" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(700, 212)
+
+[node name="Walls3" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(701, 349)
+
+[node name="Player" parent="." groups=["Player"] instance=ExtResource("1_0guaw")]
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
