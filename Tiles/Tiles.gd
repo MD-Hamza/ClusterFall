@@ -19,7 +19,7 @@ func shake_and_fall(player):
 	var original_x = position.x
 	var distance = 10
 	
-	for i in range(5):
+	for i in range(10):
 		position.x = original_x - distance
 		await get_tree().create_timer(0.05).timeout
 		position.x = original_x + distance

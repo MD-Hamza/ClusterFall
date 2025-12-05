@@ -27,13 +27,13 @@ position = Vector2(0, 238)
 position = Vector2(592, 180)
 
 [node name="Walls" parent="." instance=ExtResource("6_iws00")]
-position = Vector2(274, 54)
+position = Vector2(275, 12)
 
 [node name="Walls2" parent="." instance=ExtResource("6_iws00")]
-position = Vector2(274, 194)
+position = Vector2(278, 150)
 
 [node name="Walls3" parent="." instance=ExtResource("6_iws00")]
-position = Vector2(275, 331)
+position = Vector2(277, 286)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_0guaw")]
 
@@ -49,19 +49,19 @@ position = Vector2(122, 117)
 position = Vector2(126, 236)
 
 [node name="Tile7" parent="." instance=ExtResource("2_84226")]
-position = Vector2(307, -2)
+position = Vector2(303, -56)
 
 [node name="Tile8" parent="." instance=ExtResource("2_84226")]
-position = Vector2(307, 119)
+position = Vector2(302, 63)
 
 [node name="Tile9" parent="." instance=ExtResource("2_84226")]
-position = Vector2(308, 236)
+position = Vector2(304, 184)
 
 [node name="Tile10" parent="." instance=ExtResource("2_84226")]
-position = Vector2(427, 0)
+position = Vector2(425, -57)
 
 [node name="Tile11" parent="." instance=ExtResource("2_84226")]
-position = Vector2(430, 115)
+position = Vector2(425, 60)
 
 [node name="Tile12" parent="." instance=ExtResource("2_84226")]
-position = Vector2(434, 234)
+position = Vector2(424, 184)
