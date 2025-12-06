@@ -29,6 +29,24 @@ position = Vector2(592, 180)
 [node name="Walls" parent="." instance=ExtResource("6_iws00")]
 position = Vector2(275, 12)
 
+[node name="Walls" parent="Walls" instance=ExtResource("6_iws00")]
+position = Vector2(298, 2)
+
+[node name="Walls2" parent="Walls" instance=ExtResource("6_iws00")]
+position = Vector2(301, 140)
+
+[node name="Walls3" parent="Walls" instance=ExtResource("6_iws00")]
+position = Vector2(300, 276)
+
+[node name="Tile7" parent="Walls" instance=ExtResource("2_84226")]
+position = Vector2(328, 231)
+
+[node name="Tile8" parent="Walls" instance=ExtResource("2_84226")]
+position = Vector2(321, -13)
+
+[node name="Tile9" parent="Walls" instance=ExtResource("2_84226")]
+position = Vector2(326, 110)
+
 [node name="Walls2" parent="." instance=ExtResource("6_iws00")]
 position = Vector2(278, 150)
 
