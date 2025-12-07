@@ -83,3 +83,6 @@ position = Vector2(425, 60)
 
 [node name="Tile12" parent="." instance=ExtResource("2_84226")]
 position = Vector2(424, 184)
+
+[node name="Tile13" parent="." instance=ExtResource("2_84226")]
+position = Vector2(717, 11)
