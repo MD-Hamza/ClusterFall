@@ -62,7 +62,7 @@ position = Vector2(425, 60)
 position = Vector2(424, 184)
 
 [node name="Tile13" parent="." instance=ExtResource("2_84226")]
-position = Vector2(717, 11)
+position = Vector2(718, 6)
 
 [node name="Walls4" parent="." instance=ExtResource("6_iws00")]
 position = Vector2(566, 19)
@@ -73,11 +73,17 @@ position = Vector2(569, 157)
 [node name="Walls6" parent="." instance=ExtResource("6_iws00")]
 position = Vector2(568, 293)
 
+[node name="Tile18" parent="." instance=ExtResource("2_84226")]
+position = Vector2(722, 248)
+
 [node name="Tile14" parent="." instance=ExtResource("2_84226")]
 position = Vector2(596, 248)
 
 [node name="Tile15" parent="." instance=ExtResource("2_84226")]
-position = Vector2(589, 4)
+position = Vector2(596, 6)
+
+[node name="Tile17" parent="." instance=ExtResource("2_84226")]
+position = Vector2(719, 126)
 
 [node name="Tile16" parent="." instance=ExtResource("2_84226")]
 position = Vector2(594, 127)
