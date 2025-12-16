@@ -91,3 +91,24 @@ position = Vector2(594, 127)
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("1_0guaw")]
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Obstacle" parent="." instance=ExtResource("5_yvm6h")]
+position = Vector2(840, 180)
+
+[node name="Tile19" parent="." instance=ExtResource("2_84226")]
+position = Vector2(966, 6)
+
+[node name="Tile20" parent="." instance=ExtResource("2_84226")]
+position = Vector2(970, 248)
+
+[node name="Tile21" parent="." instance=ExtResource("2_84226")]
+position = Vector2(844, 248)
+
+[node name="Tile22" parent="." instance=ExtResource("2_84226")]
+position = Vector2(844, 6)
+
+[node name="Tile23" parent="." instance=ExtResource("2_84226")]
+position = Vector2(967, 126)
+
+[node name="Tile24" parent="." instance=ExtResource("2_84226")]
+position = Vector2(842, 127)
