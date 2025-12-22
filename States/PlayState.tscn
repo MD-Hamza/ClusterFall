@@ -115,3 +115,18 @@ position = Vector2(797, 289)
 
 [node name="Obstacle3" parent="Obstacles" instance=ExtResource("5_yvm6h")]
 position = Vector2(797, 42)
+
+[node name="Tile25" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1095, 8)
+
+[node name="Tile26" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1099, 250)
+
+[node name="Tile27" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1096, 128)
+
+[node name="Tile28" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1096, 372)
+
+[node name="Tile29" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1095, -113)
