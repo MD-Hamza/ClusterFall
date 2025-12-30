@@ -130,3 +130,33 @@ position = Vector2(1096, 372)
 
 [node name="Tile29" parent="." instance=ExtResource("2_84226")]
 position = Vector2(1095, -113)
+
+[node name="Tile30" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1224, 6)
+
+[node name="Tile31" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1228, 248)
+
+[node name="Tile32" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1225, 126)
+
+[node name="Tile33" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1225, 370)
+
+[node name="Tile34" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1224, -115)
+
+[node name="Tile35" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1350, 8)
+
+[node name="Tile36" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1354, 250)
+
+[node name="Tile37" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1351, 128)
+
+[node name="Tile38" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1351, 372)
+
+[node name="Tile39" parent="." instance=ExtResource("2_84226")]
+position = Vector2(1350, -113)
