@@ -160,3 +160,18 @@ position = Vector2(1351, 372)
 
 [node name="Tile39" parent="." instance=ExtResource("2_84226")]
 position = Vector2(1350, -113)
+
+[node name="Walls7" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(1499, 31)
+
+[node name="Walls8" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(1502, 169)
+
+[node name="Walls11" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(1499, -109)
+
+[node name="Walls9" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(1501, 305)
+
+[node name="Walls10" parent="." instance=ExtResource("6_iws00")]
+position = Vector2(1501, 438)
